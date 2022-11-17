@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	 <script src="https://kit.fontawesome.com/712575d4a5.js" 
+    crossorigin="anonymous"></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,
 	minimun-scale=1.0">
@@ -11,7 +13,8 @@
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 	<script src="main.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<style>
         /* Stackoverflow preview fix, please ignore */
        
@@ -32,7 +35,32 @@
         body{
         background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
         }
-        
+		*{
+        box-sizing: border-box;
+		}
+		/* Set additional styling options for the columns */
+		.column {
+		float: left;
+		}
+		/* Set width length for the left, right and middle columns */
+		.left {
+		width: 65%;
+		}
+		.right {
+		width: 35%;
+		}
+		.row:after {
+		content: "";
+		display: table;
+		clear: both;
+		}
+		.btn{
+			position: absolute;
+			background: #0f0f0f;
+			color: white;
+			border-radius: 70%;
+			
+		}
     </style>
 </head>
 
@@ -53,31 +81,53 @@
 
 		<div class="secciones">
 			<article id="tab1">
-				<section class="container text-center">
-					
-					<div id="columnas">
-						<li>
-							<h4 class="purple-text" >VENTA DE PRODUCTOS A BASE DE CANNABIS</h4>
-							<p class="text-left">
-								11 de noviembre del 2022 
+				<div class="row">
+					<div class="column left" style="background-color:#FFB695;">
+						<h2>VENTA DE PRODUCTOS EN BASE A CANNABIS</h2>
+						<p>16 de Noviembre del 2022</p>
+						<div class="ratio ratio-16x9">
+							<img src="https://lugh-cbd.com/wp-content/uploads/2021/03/comprar-marihuana-online-702x526.jpg" alt="cryp">
+						</div>
+						<section class="text-justify">
+                  
+							<p>
+							  "Comprar cannabis a través de Internet es absolutamente legal, por lo que esa no debe ser una de tus preocupaciones.
+							  Puede que sigas teniendo cierta inquietud respecto a dónde comprarlo para que sea totalmente seguro y de la mejor 
+							  calidad. Hemos preparado esta guía para poder despejar tus dudas y que estés preparado para poder comprar marihuana
+							  online de manera legal y segura"[1].
 							</p>
-								<p class="text-left">
-								<img src="https://lugh-cbd.com/wp-content/uploads/2021/03/comprar-marihuana-online-702x526.jpg" alt="crypysidio" width="700" height="500">
+							<p>
+							  "¿Dónde comprar marihuana online?
+							  puede que si te estás iniciando en este mundo pienses que el proceso de compra de marihuana online va a ser muy complejo,
+							  que necesitas mucho conocimiento previo, que quizás incluso necesites entrar en la dark web…
+							  Pero nada de eso es cierto. La experiencia de compra es mucho más sencilla y agradable de lo que pudieses pensar a priori. 
+							  La marihuana legal, al no estar considerada una sustancia psicotrópica, no está prohibida su venta, por lo que podrás comprarla 
+							  simplemente navegando por la web, como harías con cualquier otro producto. Actualmente, la venta de marihuana legal está en 
+							  auge, así cómo las tiendas que la comercializan. Esto hace que la experiencia de compra sea todavía más sencilla, ya que no te 
+							  costará mucho tiempo encontrar una tienda que venda cannabis legal online. Ya que encontrarás varios portales especializados 
+							  en la venta de marihuana online , te recomendamos que no te precipites y contrastes bien antes de elegir en qué portal comprar"[1].
 							</p>
-						</li>
-						<li>
-							<form class="text-right" id="form" action="_blank">
-							<div class="buscar">
-								<input type="text" placeholder="Buscar" required>
-								<div class="btn">
-									<i class="fa fa-search icon"></i>
-								</div>
-							</div>  
-							<!--<input  class="text-right" id="submit" type="submit" value="Buscar" class="btn btn-warning mt-3" />
-							<input class="text-center" name="buscar" id="buscar" type="search" placeholder="Buscar en página Web" required /> <br>
-							-->
-							<br> 
-							<h5>NUESTROS PRODUCTOS</h5>
+						  </section>
+						  <section class= "text-center" id="video_in">
+							<div class="ratio ratio-16x9">
+								<iframe src="https://www.youtube.com/embed/SJFn3LGPm6I" title="YouTube video" allowfullscreen></iframe>
+							</div>
+						  </section>
+					</div>
+					<div class="column right" style="background-color:#96D1CD;">
+						    <input id="buscar" class="buscar" placeholder="Buscar...">
+							<button id="btn" class="btn fa fa-search icon"></button>
+							<div id="panel" class="panel"></div>
+							<script>
+								btn.onclick=function(){
+									var buscar = document.getElementById("buscar").value;
+									if(buscar=='Hola'){
+										panel.innerHTML = "es una palabra"
+									}
+								}
+							</script>	
+							<h2>PRODUCTOS</h2>
+							
 							<p>
 								<a href = "https://www.clarin.com/buena-vida/salud/aceite-de-cannabis-beneficios-y-contraindicaciones_0_xU20Z492.html">Aceites CBD</a>
 							</p>
@@ -88,47 +138,16 @@
 								<a href = "https://www.clarin.com/buena-vida/salud/aceite-de-cannabis-beneficios-y-contraindicaciones_0_xU20Z492.html">Cosméticos CDBD</a>
 							</p>
 							<p>
-								<a href = "https://www.clarin.com/buena-vida/salud/aceite-de-cannabis-beneficios-y-contraindicaciones_0_xU20Z492.html">Estractos</a>
-							</p>	
-							<p>	
-								<img src="https://i.pinimg.com/550x/3d/f4/0b/3df40bec7045edeeb3691cce6cc96625.jpg" alt="crypysidio" width="200" height="333">
+								<a href="https://www.clarin.com/buena-vida/salud/aceite-de-cannabis-beneficios-y-contraindicaciones_0_xU20Z492.htm">Estractos</a>
 							</p>
-							</form>
-						</li>
+						
+
+						<div class="ratio ratio-16x9">
+							<img src="https://i.pinimg.com/550x/3d/f4/0b/3df40bec7045edeeb3691cce6cc96625.jpg" alt="cryp">
+						</div>
+
 					</div>
-        
-                </section>
-                <section class="text-justify">
-                  
-                  <p>
-                    Comprar cannabis a través de Internet es absolutamente legal, por lo que esa no debe ser una de tus preocupaciones.
-                    Puede que sigas teniendo cierta inquietud respecto a dónde comprarlo para que sea totalmente seguro y de la mejor 
-                    calidad. Hemos preparado esta guía para poder despejar tus dudas y que estés preparado para poder comprar marihuana
-                    online de manera legal y segura.
-                  </p>
-                  <p>
-                    ¿Dónde comprar marihuana online?
-                    puede que si te estás iniciando en este mundo pienses que el proceso de compra de marihuana online va a ser muy complejo,
-                    que necesitas mucho conocimiento previo, que quizás incluso necesites entrar en la dark web…
-                    Pero nada de eso es cierto. La experiencia de compra es mucho más sencilla y agradable de lo que pudieses pensar a priori. 
-                    La marihuana legal, al no estar considerada una sustancia psicotrópica, no está prohibida su venta, por lo que podrás comprarla 
-                    simplemente navegando por la web, como harías con cualquier otro producto. Actualmente, la venta de marihuana legal está en 
-                    auge, así cómo las tiendas que la comercializan. Esto hace que la experiencia de compra sea todavía más sencilla, ya que no te 
-                    costará mucho tiempo encontrar una tienda que venda cannabis legal online. Ya que encontrarás varios portales especializados 
-                    en la venta de marihuana online , te recomendamos que no te precipites y contrastes bien antes de elegir en qué portal comprar
-                  </p>
-                </section>
-               
-
-            </section>
-
-            <section class= "text-center" id="video_in">
-              <!---->
-                <!--<iframe id="video" width="700" height="500" src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&amp;controls=0&amp;showinfo=0"
-                frameborder="0" allowfullscreen ></iframe>-->
-                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/fBC0huUKWsA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </section>
-			
+				</div>
 			</article>
 			<article id="tab2">
 				<h1>Nosotros</h1>
